@@ -19,10 +19,25 @@
       <artifactId>javafx-controls</artifactId>
       <version>20.0.1</version>
     </dependency>
+
     <dependency>
       <groupId>org.openjfx</groupId>
       <artifactId>javafx-fxml</artifactId>
       <version>20.0.1</version>
+    </dependency>
+
+    <!-- Twilio dependency -->
+    <dependency>
+      <groupId>com.twilio.sdk</groupId>
+      <artifactId>twilio</artifactId>
+      <version>8.1.0</version> <!-- Use a stable version here -->
+    </dependency>
+
+    <!-- JavaMail API dependency -->
+    <dependency>
+      <groupId>javax.mail</groupId>
+      <artifactId>javax.mail-api</artifactId>
+      <version>1.6.2</version>
     </dependency>
 
 <dependency>
@@ -31,12 +46,19 @@
       <version>${junit.version}</version>
       <scope>test</scope>
     </dependency>
+
     <dependency>
       <groupId>org.junit.jupiter</groupId>
       <artifactId>junit-jupiter-engine</artifactId>
       <version>${junit.version}</version>
       <scope>test</scope>
-    </dependency>  </dependencies>
+    </dependency>
+    <dependency>
+      <groupId>org.jetbrains</groupId>
+      <artifactId>annotations</artifactId>
+      <version>24.0.0</version>
+    </dependency>
+  </dependencies>
 
   <build>
     <plugins>

@@ -1,6 +1,8 @@
 package com.example.ams;
 
 import java.sql.*;
+import java.util.ArrayList;
+import java.util.List;
 
 public class DatabaseManager<T> {
     public final String DATABASE_URL;
@@ -8,7 +10,7 @@ public class DatabaseManager<T> {
     public DatabaseManager(String DATABASE_URL) {
         this.DATABASE_URL = DATABASE_URL;
     }
-        public Boolean removeDataRow(int primaryKeyValue, String primaryKeyColumnName, String tableName) {
+        public Boolean removeDataRow(T primaryKeyValue, String primaryKeyColumnName, String tableName) {
             try (Connection connection = DriverManager.getConnection(DATABASE_URL);
                  Statement statement = connection.createStatement()) {
                 String deleteRowSQL = "DELETE FROM " + tableName + " WHERE " + primaryKeyColumnName + " = '" + primaryKeyValue + "'";
@@ -39,7 +41,7 @@ public class DatabaseManager<T> {
             }
             return cellValue;
         }
-        public Boolean updateCellValue(String columnName, String primaryKeyColumn, int primaryKeyValue, String newValue, String tableName) {
+        public Boolean updateCellValue(String columnName, String primaryKeyColumn, T primaryKeyValue, T newValue, String tableName) {
             try (Connection connection = DriverManager.getConnection(DATABASE_URL);
                  Statement statement = connection.createStatement()) {
                 String updateSQL = "UPDATE " + tableName + " SET " + columnName + " = '" + newValue + "'" + " WHERE " + primaryKeyColumn + " = '" + primaryKeyValue + "'";
@@ -56,6 +58,7 @@ public class DatabaseManager<T> {
                 return false;
             }
         }
+
         public int getNextPrimaryKey(String tableName, String primaryKeyColumn) {
             int nextPrimaryKey = 1; // Default value if no rows exist
             try (Connection connection = DriverManager.getConnection(DATABASE_URL);
@@ -73,23 +76,33 @@ public class DatabaseManager<T> {
 
         public int getRowCount(String tableName) {
             int rowCount = 0;
-
             try (Connection connection = DriverManager.getConnection(DATABASE_URL);
                  Statement statement = connection.createStatement()) {
-
-                // SQL query to get the row count
                 String query = "SELECT COUNT(*) as row_count FROM " + tableName;
                 ResultSet resultSet = statement.executeQuery(query);
-
-                // Retrieve the row count from the result set
                 if (resultSet.next()) {
                     rowCount = resultSet.getInt("row_count");
                 }
             } catch (SQLException e) {
                 System.err.println("Error: " + e.getMessage());
             }
-
             return rowCount;
         }
+
+    public List<String> getDataFromColumn(String tableName, String columnName) {
+        List<String> columnData = new ArrayList<>();
+        try (Connection connection = DriverManager.getConnection(DATABASE_URL);
+             Statement statement = connection.createStatement()) {
+                String sqlQuery = "SELECT " + columnName + " FROM " + tableName;
+                ResultSet resultSet = statement.executeQuery(sqlQuery);
+                while (resultSet.next()) {
+                    String columnValue = resultSet.getString(columnName);
+                    columnData.add(columnValue);
+                }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return columnData;
+    }
 }
 

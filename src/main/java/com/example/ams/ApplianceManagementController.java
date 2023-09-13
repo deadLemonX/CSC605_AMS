@@ -24,6 +24,7 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
 import java.net.URL;
+import java.util.List;
 import java.util.ResourceBundle;
 
 public class ApplianceManagementController implements Initializable {
@@ -139,7 +140,7 @@ public class ApplianceManagementController implements Initializable {
         final String TABLE_NAME_APPLIANCE_DATA = "ApplianceData";
         int applianceCount = databaseManager.getRowCount(TABLE_NAME_APPLIANCE_DATA);
         labelApplianceCount.setText("Appliance Count: " + applianceCount);
-        refreshDashboard(applianceCount);
+        refreshDashboard(applianceCount, "add");
     }
     @FXML
     void handelHomeButton(ActionEvent event) {
@@ -161,7 +162,7 @@ public class ApplianceManagementController implements Initializable {
         final String TABLE_NAME_APPLIANCE_DATA = "ApplianceData";
         int applianceCount = databaseManager.getRowCount(TABLE_NAME_APPLIANCE_DATA);
         labelApplianceCount.setText("Appliance Count: " + applianceCount);
-        refreshDashboard(applianceCount);
+        refreshDashboard(applianceCount, "remove");
 
 
     }
@@ -175,17 +176,24 @@ public class ApplianceManagementController implements Initializable {
         // Get appliance count and set label
         int applianceCount = databaseManager.getRowCount(TABLE_NAME_APPLIANCE_DATA);
         labelApplianceCount.setText("Appliance Count: " + applianceCount);
-        refreshDashboard(applianceCount);
+        refreshDashboard(applianceCount, "init");
     }
 
     public void updateDashboard(Label alias, Label status, ImageView imageLink, int index) {
         final String TABLE_NAME_APPLIANCE_DATA = "ApplianceData";
         final String P_KEY_COL_NAME_APPLIANCE = "ApplianceID";
-        alias.setText("Location: " + (String) databaseManager.getCellValue(P_KEY_COL_NAME_APPLIANCE, "Location", index, TABLE_NAME_APPLIANCE_DATA));
-        status.setText("Status: " + (String) databaseManager.getCellValue(P_KEY_COL_NAME_APPLIANCE, "Status", index, TABLE_NAME_APPLIANCE_DATA));
+        String imageFilePath = "";
+        if (index != 200000) {
+            alias.setText("Location: " + (String) databaseManager.getCellValue(P_KEY_COL_NAME_APPLIANCE, "Location", index, TABLE_NAME_APPLIANCE_DATA));
+            status.setText("Status: " + (String) databaseManager.getCellValue(P_KEY_COL_NAME_APPLIANCE, "Status", index, TABLE_NAME_APPLIANCE_DATA));
 
-        // creating the image object
-        String imageFilePath = (String) databaseManager.getCellValue(P_KEY_COL_NAME_APPLIANCE, "ImageLink", index, TABLE_NAME_APPLIANCE_DATA);
+            // creating the image object
+            imageFilePath = (String) databaseManager.getCellValue(P_KEY_COL_NAME_APPLIANCE, "ImageLink", index, TABLE_NAME_APPLIANCE_DATA);
+        } else {
+            alias.setText("");
+            status.setText("");
+            imageFilePath = "/Users/matthewrivera/Projects/AMS/src/main/resources/com/example/ams/images/blankspace.png";
+        }
         InputStream stream = null;
         try {
             stream = new FileInputStream(imageFilePath);
@@ -199,16 +207,23 @@ public class ApplianceManagementController implements Initializable {
         imageLink.setFitWidth(65);
         imageLink.setPreserveRatio(true);
     }
-    public void refreshDashboard(int applianceCount) {
+    public void refreshDashboard(int applianceCount, String action) {
+        final String TABLE_NAME_APPLIANCE_DATA = "ApplianceData";
+        final String P_KEY_COL_NAME_APPLIANCE = "ApplianceID";
         // List of containers needed for updates
         Label[] aliasContainers = {label_Alias_1, label_Alias_2, label_Alias_3, label_Alias_4, label_Alias_5, label_Alias_6, label_Alias_7, label_Alias_8, label_Alias_9, label_Alias_10, label_Alias_11, label_Alias_12, label_Alias_13, label_Alias_14, label_Alias_15, label_Alias_16, label_Alias_17, label_Alias_18, label_Alias_19, label_Alias_20, label_Alias_21, label_Alias_22, label_Alias_23, label_Alias_24, label_Alias_25, label_Alias_26, label_Alias_27, label_Alias_28, label_Alias_29, label_Alias_30};
         Label[] statusContainers = {label_Status_1, label_Status_2, label_Status_3, label_Status_4, label_Status_5, label_Status_6, label_Status_7, label_Status_8, label_Status_9, label_Status_10, label_Status_11, label_Status_12, label_Status_13, label_Status_14, label_Status_15, label_Status_16, label_Status_17, label_Status_18, label_Status_19, label_Status_20, label_Status_21, label_Status_22, label_Status_23, label_Status_24, label_Status_25, label_Status_26, label_Status_27, label_Status_28, label_Status_29, label_Status_30};
         ImageView[] imageLinkContainers = {image_App_1, image_App_2, image_App_3, image_App_4, image_App_5, image_App_6, image_App_7, image_App_8, image_App_9, image_App_10, image_App_11, image_App_12, image_App_13, image_App_14, image_App_15, image_App_16, image_App_17, image_App_18, image_App_19, image_App_20, image_App_21, image_App_22, image_App_23, image_App_24, image_App_25, image_App_26, image_App_27, image_App_28, image_App_29, image_App_30};
 
-        for (int i = 1; i <= applianceCount; i++) {
+        List<String> lstApplianceID = databaseManager.getDataFromColumn(TABLE_NAME_APPLIANCE_DATA, P_KEY_COL_NAME_APPLIANCE);
+        for (int i = 0; i < applianceCount; i++) {
             // this will cause a bug if an appliance is removed, and it's not the last appliance on the list, ill figure this out eventually
-            updateDashboard(aliasContainers[i - 1], statusContainers[i - 1], imageLinkContainers[i - 1], i);
+            updateDashboard(aliasContainers[i], statusContainers[i], imageLinkContainers[i], Integer.parseInt(lstApplianceID.get(i)));
         }
+        if (action.equals("remove")) {
+            updateDashboard(aliasContainers[applianceCount], statusContainers[applianceCount], imageLinkContainers[applianceCount], 200000);
+        }
+
     }
 }
 

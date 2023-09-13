@@ -4,6 +4,8 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.sql.ResultSet;
+import java.time.LocalDate;
+import java.time.Period;
 
 public class ApplianceManager {
 
@@ -36,6 +38,23 @@ public class ApplianceManager {
         } catch (SQLException e) {
             System.err.println("Error: " + e.getMessage());
             return false;
+        }
+    }
+
+    public String checkServiceStatus(LocalDate inputDate) {
+        // Get the current date
+        LocalDate currentDate = LocalDate.now();
+        System.out.println(currentDate);
+
+        // Calculate the difference in years between the current date and input date
+        Period period = Period.between(inputDate, currentDate);
+
+        // Check if the input date is 1 year or more in the past
+        System.out.println(period.getYears());
+        if (period.getYears() >= 1) {
+            return "Needs Service";
+        } else {
+            return "Good";
         }
     }
 

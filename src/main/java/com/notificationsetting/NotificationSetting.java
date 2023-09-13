@@ -59,6 +59,7 @@ public class NotificationSetting {
         return appliance + " in " + location + (status ? " running" : " not working");
     }
 
+    //Encrption Message
     public static String encryptionMessage(String message, String secretKey) {
         return encrypt(message, secretKey);
     }

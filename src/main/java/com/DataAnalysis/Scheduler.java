@@ -6,10 +6,10 @@ import java.sql.*;
 import java.util.ArrayList;
 
 public class Scheduler {
-    private static final String DATABASE_URL = "jdbc:sqlite:C:\\Users\\MikeJ\\IdeaProjects\\AMS_Scheduler\\AMS_Scheduler";
+    private static final String DATABASE_URL = "jdbc:sqlite:/Users/matthewrivera/Projects/AMS/AMS_Database";
 
 
-    public static Boolean addAppointment(String DATABASE_URL, String TABLE_NAME, int applianceID, String applianceType, String applianceStatus, Date scheduleDate, String maintenanceID) {
+    public Boolean addAppointment(String DATABASE_URL, String TABLE_NAME, int applianceID, String applianceType, String applianceStatus, Date scheduleDate, String maintenanceID) {
         try (Connection connection = DriverManager.getConnection(DATABASE_URL);
              Statement statement = connection.createStatement()) {
 

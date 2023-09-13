@@ -1,3 +1,4 @@
+/*
 package com.notificationsetting;
 
 import com.notificationsetting.NotificationSetting;
@@ -12,9 +13,7 @@ import javafx.stage.Stage;
 
 import static com.notificationsetting.NotificationSetting.*;
 
-/*
-This is to test the code
- */
+
 public class NotificationSettingUI extends Application {
 
     // Your Twilio and other constants here
@@ -107,3 +106,4 @@ public class NotificationSettingUI extends Application {
         primaryStage.show();
     }
 }
+*/

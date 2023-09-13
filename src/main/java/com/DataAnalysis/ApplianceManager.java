@@ -60,19 +60,19 @@ public class ApplianceManager {
 
 
 
-    /*
+/*
     public static void main(String[] args) {
         DatabaseManager databaseManager = new DatabaseManager("jdbc:sqlite:/Users/matthewrivera/Projects/AMS/AMS_Database");
         final String DATABASE_URL = databaseManager.DATABASE_URL;
-        final String TABLE_NAME_APPLIANCE_DATA = "ApplianceData";
+        //final String TABLE_NAME_APPLIANCE_DATA = "ApplianceData";
         final String TABLE_NAME_IMAGE_DATA = "ApplianceImageTypeData";
 
-        ApplianceManager applianceManager = new ApplianceManager();
+       ApplianceManager applianceManager = new ApplianceManager();
 
-        String searchCol = "Alias";
-        String pKeyColName = "ApplianceID";
-        String newValue = "Chubbier Tom";
-
+       // String searchCol = "Alias";
+       // String pKeyColName = "ApplianceID";
+       // String newValue = "Chubbier Tom";
+        /*
         for (int i = 0; i < 100; i++) {
             //applianceManager.addAppliance(DATABASE_URL,TABLE_NAME_APPLIANCE_DATA, i, "Washer", "GE", "a3000HD", "Unit 10" + String.valueOf(i), "HOLD" , "Good", "09/05/2023", "Chubby Tom");
             String result = applianceManager.getCellValue(pKeyColName, searchCol, "");
@@ -80,7 +80,7 @@ public class ApplianceManager {
             //manager.removeAppliance(i, pKeyColName);
             //manager.updateCellValue(searchCol, pKeyColName, i, newValue);
         }
-
+        */
         //int nextKey = databaseManager.getNextPrimaryKey("ApplianceData", pKeyColName);
         //System.out.println(nextKey);
 
@@ -93,8 +93,9 @@ public class ApplianceManager {
             Dishwasher
             Air Conditioner
             Furnace
-
-        String imageDataHomeDir ="/Users/matthewrivera/Projects/AMS/src/main/resources/com/example/ams/images/";
+        */
+        /*
+        String imageDataHomeDir ="/Users/matthewrivera/IdeaProjects/CSC605_AMS/src/main/resources/com/DataAnalysis/images/";
         applianceManager.addApplianceTypeImageLink(DATABASE_URL, TABLE_NAME_IMAGE_DATA, "Refrigerator", imageDataHomeDir + "refrigerator.png");
         applianceManager.addApplianceTypeImageLink(DATABASE_URL, TABLE_NAME_IMAGE_DATA, "Dishwasher", imageDataHomeDir + "dishwasher.png");
         applianceManager.addApplianceTypeImageLink(DATABASE_URL, TABLE_NAME_IMAGE_DATA, "Washing Machine", imageDataHomeDir + "washing-machine.png");
@@ -104,5 +105,5 @@ public class ApplianceManager {
         applianceManager.addApplianceTypeImageLink(DATABASE_URL, TABLE_NAME_IMAGE_DATA, "Furnace", imageDataHomeDir + "furnace.png");
 
     }
-     */
+    */
 }

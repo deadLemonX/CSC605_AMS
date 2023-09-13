@@ -1,10 +1,10 @@
-package com.example.ams_scheduler;
+package com.DataAnalysis;
 
 import java.sql.*;
 
 public class MaintenancePersonnel {
 
-    public static Boolean addWorker(String DATABASE_URL, String TABLE_NAME, int maintenanceID, String workerName, Boolean certification) {
+    public Boolean addWorker(String DATABASE_URL, String TABLE_NAME, int maintenanceID, String workerName, Boolean certification) {
         try (Connection connection = DriverManager.getConnection(DATABASE_URL);
              Statement statement = connection.createStatement()) {
 
@@ -22,7 +22,7 @@ public class MaintenancePersonnel {
         }
     }
 
-    public static void clearMaintenanceTable(String DATABASE_URL, String TABLE_NAME) {
+    public void clearMaintenanceTable(String DATABASE_URL, String TABLE_NAME) {
         try (Connection connection = DriverManager.getConnection(DATABASE_URL);
              Statement statement = connection.createStatement()) {
 

@@ -32,6 +32,20 @@
       <version>20.0.1</version>
     </dependency>
 
+    <!-- Twilio dependency -->
+    <dependency>
+      <groupId>com.twilio.sdk</groupId>
+      <artifactId>twilio</artifactId>
+      <version>8.1.0</version> <!-- Use a stable version here -->
+    </dependency>
+
+    <!-- JavaMail API dependency -->
+    <dependency>
+      <groupId>javax.mail</groupId>
+      <artifactId>javax.mail-api</artifactId>
+      <version>1.6.2</version>
+    </dependency>
+
     <dependency>
       <groupId>org.junit.jupiter</groupId>
       <artifactId>junit-jupiter-api</artifactId>

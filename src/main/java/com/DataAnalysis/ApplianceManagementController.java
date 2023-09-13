@@ -23,7 +23,7 @@ import java.util.ResourceBundle;
 public class ApplianceManagementController implements Initializable {
     DatabaseManager databaseManager;
     @FXML private Button button_AddAppliance;
-    @FXML private Button button_Home;
+    @FXML private Button button_Schedule;
     @FXML private Button button_RemoveAppliance;
     @FXML private ImageView image_App_1;
     @FXML private ImageView image_App_10;
@@ -136,8 +136,18 @@ public class ApplianceManagementController implements Initializable {
         refreshDashboard(applianceCount, "add");
     }
     @FXML
-    void handelHomeButton(ActionEvent event) {
+    void handelScheduleButton(ActionEvent event) {
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/Scheduler_view.fxml"));
+            Parent root = loader.load();
+            Stage stage = new Stage();
+            stage.setTitle("Schedule Maintenance");
+            stage.setScene(new Scene(root));
+            stage.showAndWait();
 
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
     @FXML
     void handelRemoveAppliance(ActionEvent event) {
@@ -185,7 +195,7 @@ public class ApplianceManagementController implements Initializable {
         } else {
             alias.setText("");
             status.setText("");
-            imageFilePath = "/Users/matthewrivera/Projects/AMS/src/main/resources/com/example/ams/images/blankspace.png";
+            imageFilePath = "/Users/matthewrivera/Projects/AMS/src/main/resources/com/DataAnalysis/images/blankspace.png";
         }
         InputStream stream = null;
         try {

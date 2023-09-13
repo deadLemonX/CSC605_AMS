@@ -1,4 +1,4 @@
-package com.example.ams;
+package com.UserInterface;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -17,7 +17,7 @@ public class AMS_Application extends Application {
     @Override
     public void start(Stage stage) throws IOException {
 
-        FXMLLoader fxmlLoader = new FXMLLoader(AMS_Application.class.getResource("/ApplianceManagement.fxml")); // ApplianceManagement ApplianceRegistration
+        FXMLLoader fxmlLoader = new FXMLLoader(AMS_Application.class.getResource("/Login.fxml")); // ApplianceManagement ApplianceRegistration
 
         Scene scene = new Scene(fxmlLoader.load(), 994, 638); // ApplianceManagement
         //Scene scene = new Scene(fxmlLoader.load(), 400, 550); // ApplianceRegistration

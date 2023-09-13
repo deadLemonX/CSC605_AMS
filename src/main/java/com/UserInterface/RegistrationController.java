@@ -29,7 +29,7 @@ public class RegistrationController {
             return;
         }
 
-        final String DATABASE_URL = "jdbc:sqlite:registration_database.sqlite";
+        final String DATABASE_URL = "jdbc:sqlite:/Users/matthewrivera/Projects/AMS/AMS_Database";
         final String TABLE_NAME = "user_registration";
 
         // Call the addUser method from registrationDatabaseStuff with the required arguments

@@ -8,7 +8,7 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="691.0" prefWidth="834.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.ams_scheduler.SchedulerController">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="691.0" prefWidth="834.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.DataAnalysis.SchedulerController">
    <children>
       <DatePicker fx:id="MaintenanceDatePicker" layoutX="574.0" layoutY="160.0" />
       <Label fx:id="CalendarLabel" layoutX="586.0" layoutY="119.0" prefHeight="17.0" prefWidth="149.0" text="Select Maintenance date" />

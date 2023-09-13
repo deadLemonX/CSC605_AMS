@@ -19,7 +19,7 @@
          <children>
             <HBox prefHeight="82.0" prefWidth="969.0">
                <children>
-                  <Button fx:id="button_Home" mnemonicParsing="false" onAction="#handelHomeButton" text="Home">
+                  <Button fx:id="button_Schedule" mnemonicParsing="false" onAction="#handelScheduleButton" prefHeight="26.0" prefWidth="86.0" text="Schedule">
                      <HBox.margin>
                         <Insets left="5.0" top="10.0" />
                      </HBox.margin>
@@ -37,7 +37,7 @@
                         <Font name="System Italic" size="18.0" />
                      </font>
                      <HBox.margin>
-                        <Insets left="150.0" top="10.0" />
+                        <Insets left="100.0" top="10.0" />
                      </HBox.margin>
                   </Label>
                </children>

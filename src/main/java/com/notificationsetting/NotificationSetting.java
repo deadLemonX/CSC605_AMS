@@ -1,3 +1,4 @@
+/*
 package com.notificationsetting;
 
 import com.twilio.Twilio;
@@ -12,7 +13,6 @@ import javax.mail.Transport;
 import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeMessage;
 import java.nio.charset.StandardCharsets;
-import java.security.Key;
 import java.security.MessageDigest;
 import java.util.Base64;
 import java.util.Properties;
@@ -29,7 +29,7 @@ public class NotificationSetting {
     private static final String PHONE_NUMBER = "18557751147";
 
     public static void main(String[] args) {
-        String databaseUrl = "jdbc:mysql://localhost:3306/mydatabase";
+        String databaseUrl = "jdbc:sqlite:/Users/matthewrivera/Projects/AMS/AMS_Database";
         DatabaseManager<String> databaseManager = new DatabaseManager<>(databaseUrl);
 
         String userId = "user_id";
@@ -158,3 +158,4 @@ public class NotificationSetting {
         }
     }
 }
+*/

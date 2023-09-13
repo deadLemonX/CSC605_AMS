@@ -1,0 +1,655 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="638.0" prefWidth="994.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.ams.ApplianceManagementController">
+   <children>
+      <VBox layoutX="14.0" layoutY="14.0" prefHeight="615.0" prefWidth="969.0">
+         <children>
+            <HBox prefHeight="82.0" prefWidth="969.0">
+               <children>
+                  <Button fx:id="button_Home" mnemonicParsing="false" onAction="#handelHomeButton" text="Home">
+                     <HBox.margin>
+                        <Insets left="5.0" top="10.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Label text="Appliance Management" textAlignment="CENTER">
+                     <font>
+                        <Font name="System Bold" size="36.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="250.0" top="10.0" />
+                     </HBox.margin>
+                  </Label>
+                  <Label fx:id="labelApplianceCount" text="Appliance Count: ">
+                     <font>
+                        <Font name="System Italic" size="18.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="150.0" top="10.0" />
+                     </HBox.margin>
+                  </Label>
+               </children>
+            </HBox>
+            <ScrollPane prefHeight="474.0" prefWidth="969.0">
+               <content>
+                  <GridPane prefHeight="714.0" prefWidth="955.0">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <VBox prefHeight="200.0" prefWidth="100.0">
+                           <children>
+                              <ImageView fx:id="image_App_1" fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" left="30.0" top="5.0" />
+                                 </VBox.margin>
+                              </ImageView>
+                              <Label fx:id="label_Alias_1">
+                                 <VBox.margin>
+                                    <Insets left="30.0" />
+                                 </VBox.margin>
+                              </Label>
+                              <Label fx:id="label_Status_1">
+                                 <VBox.margin>
+                                    <Insets left="30.0" />
+                                 </VBox.margin>
+                              </Label>
+                           </children>
+                        </VBox>
+                        <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1">
+                           <children>
+                              <ImageView fx:id="image_App_2" fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" left="30.0" top="5.0" />
+                                 </VBox.margin>
+                              </ImageView>
+                              <Label fx:id="label_Alias_2">
+                                 <VBox.margin>
+                                    <Insets left="30.0" />
+                                 </VBox.margin>
+                              </Label>
+                              <Label fx:id="label_Status_2">
+                                 <VBox.margin>
+                                    <Insets left="30.0" />
+                                 </VBox.margin>
+                              </Label>
+                           </children>
+                        </VBox>
+                        <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="2">
+                           <children>
+                              <ImageView fx:id="image_App_3" fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" left="30.0" top="5.0" />
+                                 </VBox.margin>
+                              </ImageView>
+                              <Label fx:id="label_Alias_3">
+                                 <VBox.margin>
+                                    <Insets left="30.0" />
+                                 </VBox.margin>
+                              </Label>
+                              <Label fx:id="label_Status_3">
+                                 <VBox.margin>
+                                    <Insets left="30.0" />
+                                 </VBox.margin>
+                              </Label>
+                           </children>
+                        </VBox>
+                        <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="3">
+                           <children>
+                              <ImageView fx:id="image_App_4" fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" left="30.0" top="5.0" />
+                                 </VBox.margin>
+                              </ImageView>
+                              <Label fx:id="label_Alias_4">
+                                 <VBox.margin>
+                                    <Insets left="30.0" />
+                                 </VBox.margin>
+                              </Label>
+                              <Label fx:id="label_Status_4">
+                                 <VBox.margin>
+                                    <Insets left="30.0" />
+                                 </VBox.margin>
+                              </Label>
+                           </children>
+                        </VBox>
+                        <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="4">
+                           <children>
+                              <ImageView fx:id="image_App_5" fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" left="30.0" top="5.0" />
+                                 </VBox.margin>
+                              </ImageView>
+                              <Label fx:id="label_Alias_5">
+                                 <VBox.margin>
+                                    <Insets left="30.0" />
+                                 </VBox.margin>
+                              </Label>
+                              <Label fx:id="label_Status_5">
+                                 <VBox.margin>
+                                    <Insets left="30.0" />
+                                 </VBox.margin>
+                              </Label>
+                           </children>
+                        </VBox>
+                        <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="5">
+                           <children>
+                              <ImageView fx:id="image_App_6" fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" left="30.0" top="5.0" />
+                                 </VBox.margin>
+                              </ImageView>
+                              <Label fx:id="label_Alias_6">
+                                 <VBox.margin>
+                                    <Insets left="30.0" />
+                                 </VBox.margin>
+                              </Label>
+                              <Label fx:id="label_Status_6">
+                                 <VBox.margin>
+                                    <Insets left="30.0" />
+                                 </VBox.margin>
+                              </Label>
+                           </children>
+                        </VBox>
+                        <VBox prefHeight="200.0" prefWidth="100.0" GridPane.rowIndex="1">
+                           <children>
+                              <ImageView fx:id="image_App_7" fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" left="30.0" top="5.0" />
+                                 </VBox.margin>
+                              </ImageView>
+                              <Label fx:id="label_Alias_7">
+                                 <VBox.margin>
+                                    <Insets left="30.0" />
+                                 </VBox.margin>
+                              </Label>
+                              <Label fx:id="label_Status_7">
+                                 <VBox.margin>
+                                    <Insets left="30.0" />
+                                 </VBox.margin>
+                              </Label>
+                           </children>
+                        </VBox>
+                        <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                           <children>
+                              <ImageView fx:id="image_App_8" fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" left="30.0" top="5.0" />
+                                 </VBox.margin>
+                              </ImageView>
+                              <Label fx:id="label_Alias_8">
+                                 <VBox.margin>
+                                    <Insets left="30.0" />
+                                 </VBox.margin>
+                              </Label>
+                              <Label fx:id="label_Status_8">
+                                 <VBox.margin>
+                                    <Insets left="30.0" />
+                                 </VBox.margin>
+                              </Label>
+                           </children>
+                        </VBox>
+                        <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                           <children>
+                              <ImageView fx:id="image_App_9" fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" left="30.0" top="5.0" />
+                                 </VBox.margin>
+                              </ImageView>
+                              <Label fx:id="label_Alias_9">
+                                 <VBox.margin>
+                                    <Insets left="30.0" />
+                                 </VBox.margin>
+                              </Label>
+                              <Label fx:id="label_Status_9">
+                                 <VBox.margin>
+                                    <Insets left="30.0" />
+                                 </VBox.margin>
+                              </Label>
+                           </children>
+                        </VBox>
+                        <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="3" GridPane.rowIndex="1">
+                           <children>
+                              <ImageView fx:id="image_App_10" fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" left="30.0" top="5.0" />
+                                 </VBox.margin>
+                              </ImageView>
+                              <Label fx:id="label_Alias_10">
+                                 <VBox.margin>
+                                    <Insets left="30.0" />
+                                 </VBox.margin>
+                              </Label>
+                              <Label fx:id="label_Status_10">
+                                 <VBox.margin>
+                                    <Insets left="30.0" />
+                                 </VBox.margin>
+                              </Label>
+                           </children>
+                        </VBox>
+                        <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="4" GridPane.rowIndex="1">
+                           <children>
+                              <ImageView fx:id="image_App_11" fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" left="30.0" top="5.0" />
+                                 </VBox.margin>
+                              </ImageView>
+                              <Label fx:id="label_Alias_11">
+                                 <VBox.margin>
+                                    <Insets left="30.0" />
+                                 </VBox.margin>
+                              </Label>
+                              <Label fx:id="label_Status_11">
+                                 <VBox.margin>
+                                    <Insets left="30.0" />
+                                 </VBox.margin>
+                              </Label>
+                           </children>
+                        </VBox>
+                        <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="5" GridPane.rowIndex="1">
+                           <children>
+                              <ImageView fx:id="image_App_12" fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" left="30.0" top="5.0" />
+                                 </VBox.margin>
+                              </ImageView>
+                              <Label fx:id="label_Alias_12">
+                                 <VBox.margin>
+                                    <Insets left="30.0" />
+                                 </VBox.margin>
+                              </Label>
+                              <Label fx:id="label_Status_12">
+                                 <VBox.margin>
+                                    <Insets left="30.0" />
+                                 </VBox.margin>
+                              </Label>
+                           </children>
+                        </VBox>
+                        <VBox prefHeight="200.0" prefWidth="100.0" GridPane.rowIndex="2">
+                           <children>
+                              <ImageView fx:id="image_App_13" fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" left="30.0" top="5.0" />
+                                 </VBox.margin>
+                              </ImageView>
+                              <Label fx:id="label_Alias_13">
+                                 <VBox.margin>
+                                    <Insets left="30.0" />
+                                 </VBox.margin>
+                              </Label>
+                              <Label fx:id="label_Status_13">
+                                 <VBox.margin>
+                                    <Insets left="30.0" />
+                                 </VBox.margin>
+                              </Label>
+                           </children>
+                        </VBox>
+                        <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                           <children>
+                              <ImageView fx:id="image_App_14" fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" left="30.0" top="5.0" />
+                                 </VBox.margin>
+                              </ImageView>
+                              <Label fx:id="label_Alias_14">
+                                 <VBox.margin>
+                                    <Insets left="30.0" />
+                                 </VBox.margin>
+                              </Label>
+                              <Label fx:id="label_Status_14">
+                                 <VBox.margin>
+                                    <Insets left="30.0" />
+                                 </VBox.margin>
+                              </Label>
+                           </children>
+                        </VBox>
+                        <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                           <children>
+                              <ImageView fx:id="image_App_15" fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" left="30.0" top="5.0" />
+                                 </VBox.margin>
+                              </ImageView>
+                              <Label fx:id="label_Alias_15">
+                                 <VBox.margin>
+                                    <Insets left="30.0" />
+                                 </VBox.margin>
+                              </Label>
+                              <Label fx:id="label_Status_15">
+                                 <VBox.margin>
+                                    <Insets left="30.0" />
+                                 </VBox.margin>
+                              </Label>
+                           </children>
+                        </VBox>
+                        <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="3" GridPane.rowIndex="2">
+                           <children>
+                              <ImageView fx:id="image_App_16" fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" left="30.0" top="5.0" />
+                                 </VBox.margin>
+                              </ImageView>
+                              <Label fx:id="label_Alias_16">
+                                 <VBox.margin>
+                                    <Insets left="30.0" />
+                                 </VBox.margin>
+                              </Label>
+                              <Label fx:id="label_Status_16">
+                                 <VBox.margin>
+                                    <Insets left="30.0" />
+                                 </VBox.margin>
+                              </Label>
+                           </children>
+                        </VBox>
+                        <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="4" GridPane.rowIndex="2">
+                           <children>
+                              <ImageView fx:id="image_App_17" fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" left="30.0" top="5.0" />
+                                 </VBox.margin>
+                              </ImageView>
+                              <Label fx:id="label_Alias_17">
+                                 <VBox.margin>
+                                    <Insets left="30.0" />
+                                 </VBox.margin>
+                              </Label>
+                              <Label fx:id="label_Status_17">
+                                 <VBox.margin>
+                                    <Insets left="30.0" />
+                                 </VBox.margin>
+                              </Label>
+                           </children>
+                        </VBox>
+                        <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="5" GridPane.rowIndex="2">
+                           <children>
+                              <ImageView fx:id="image_App_18" fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" left="30.0" top="5.0" />
+                                 </VBox.margin>
+                              </ImageView>
+                              <Label fx:id="label_Alias_18">
+                                 <VBox.margin>
+                                    <Insets left="30.0" />
+                                 </VBox.margin>
+                              </Label>
+                              <Label fx:id="label_Status_18">
+                                 <VBox.margin>
+                                    <Insets left="30.0" />
+                                 </VBox.margin>
+                              </Label>
+                           </children>
+                        </VBox>
+                        <VBox prefHeight="200.0" prefWidth="100.0" GridPane.rowIndex="3">
+                           <children>
+                              <ImageView fx:id="image_App_19" fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" left="30.0" top="5.0" />
+                                 </VBox.margin>
+                              </ImageView>
+                              <Label fx:id="label_Alias_19">
+                                 <VBox.margin>
+                                    <Insets left="30.0" />
+                                 </VBox.margin>
+                              </Label>
+                              <Label fx:id="label_Status_19">
+                                 <VBox.margin>
+                                    <Insets left="30.0" />
+                                 </VBox.margin>
+                              </Label>
+                           </children>
+                        </VBox>
+                        <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                           <children>
+                              <ImageView fx:id="image_App_20" fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" left="30.0" top="5.0" />
+                                 </VBox.margin>
+                              </ImageView>
+                              <Label fx:id="label_Alias_20">
+                                 <VBox.margin>
+                                    <Insets left="30.0" />
+                                 </VBox.margin>
+                              </Label>
+                              <Label fx:id="label_Status_20">
+                                 <VBox.margin>
+                                    <Insets left="30.0" />
+                                 </VBox.margin>
+                              </Label>
+                           </children>
+                        </VBox>
+                        <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="2" GridPane.rowIndex="3">
+                           <children>
+                              <ImageView fx:id="image_App_21" fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" left="30.0" top="5.0" />
+                                 </VBox.margin>
+                              </ImageView>
+                              <Label fx:id="label_Alias_21">
+                                 <VBox.margin>
+                                    <Insets left="30.0" />
+                                 </VBox.margin>
+                              </Label>
+                              <Label fx:id="label_Status_21">
+                                 <VBox.margin>
+                                    <Insets left="30.0" />
+                                 </VBox.margin>
+                              </Label>
+                           </children>
+                        </VBox>
+                        <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="3" GridPane.rowIndex="3">
+                           <children>
+                              <ImageView fx:id="image_App_22" fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" left="30.0" top="5.0" />
+                                 </VBox.margin>
+                              </ImageView>
+                              <Label fx:id="label_Alias_22">
+                                 <VBox.margin>
+                                    <Insets left="30.0" />
+                                 </VBox.margin>
+                              </Label>
+                              <Label fx:id="label_Status_22">
+                                 <VBox.margin>
+                                    <Insets left="30.0" />
+                                 </VBox.margin>
+                              </Label>
+                           </children>
+                        </VBox>
+                        <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="4" GridPane.rowIndex="3">
+                           <children>
+                              <ImageView fx:id="image_App_23" fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" left="30.0" top="5.0" />
+                                 </VBox.margin>
+                              </ImageView>
+                              <Label fx:id="label_Alias_23">
+                                 <VBox.margin>
+                                    <Insets left="30.0" />
+                                 </VBox.margin>
+                              </Label>
+                              <Label fx:id="label_Status_23">
+                                 <VBox.margin>
+                                    <Insets left="30.0" />
+                                 </VBox.margin>
+                              </Label>
+                           </children>
+                        </VBox>
+                        <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="5" GridPane.rowIndex="3">
+                           <children>
+                              <ImageView fx:id="image_App_24" fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" left="30.0" top="5.0" />
+                                 </VBox.margin>
+                              </ImageView>
+                              <Label fx:id="label_Alias_24">
+                                 <VBox.margin>
+                                    <Insets left="30.0" />
+                                 </VBox.margin>
+                              </Label>
+                              <Label fx:id="label_Status_24">
+                                 <VBox.margin>
+                                    <Insets left="30.0" />
+                                 </VBox.margin>
+                              </Label>
+                           </children>
+                        </VBox>
+                        <VBox prefHeight="200.0" prefWidth="100.0" GridPane.rowIndex="4">
+                           <children>
+                              <ImageView fx:id="image_App_25" fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" left="30.0" top="5.0" />
+                                 </VBox.margin>
+                              </ImageView>
+                              <Label fx:id="label_Alias_25">
+                                 <VBox.margin>
+                                    <Insets left="30.0" />
+                                 </VBox.margin>
+                              </Label>
+                              <Label fx:id="label_Status_25">
+                                 <VBox.margin>
+                                    <Insets left="30.0" />
+                                 </VBox.margin>
+                              </Label>
+                           </children>
+                        </VBox>
+                        <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                           <children>
+                              <ImageView fx:id="image_App_26" fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" left="30.0" top="5.0" />
+                                 </VBox.margin>
+                              </ImageView>
+                              <Label fx:id="label_Alias_26">
+                                 <VBox.margin>
+                                    <Insets left="30.0" />
+                                 </VBox.margin>
+                              </Label>
+                              <Label fx:id="label_Status_26">
+                                 <VBox.margin>
+                                    <Insets left="30.0" />
+                                 </VBox.margin>
+                              </Label>
+                           </children>
+                        </VBox>
+                        <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="2" GridPane.rowIndex="4">
+                           <children>
+                              <ImageView fx:id="image_App_27" fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" left="30.0" top="5.0" />
+                                 </VBox.margin>
+                              </ImageView>
+                              <Label fx:id="label_Alias_27">
+                                 <VBox.margin>
+                                    <Insets left="30.0" />
+                                 </VBox.margin>
+                              </Label>
+                              <Label fx:id="label_Status_27">
+                                 <VBox.margin>
+                                    <Insets left="30.0" />
+                                 </VBox.margin>
+                              </Label>
+                           </children>
+                        </VBox>
+                        <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="3" GridPane.rowIndex="4">
+                           <children>
+                              <ImageView fx:id="image_App_28" fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" left="30.0" top="5.0" />
+                                 </VBox.margin>
+                              </ImageView>
+                              <Label fx:id="label_Alias_28">
+                                 <VBox.margin>
+                                    <Insets left="30.0" />
+                                 </VBox.margin>
+                              </Label>
+                              <Label fx:id="label_Status_28">
+                                 <VBox.margin>
+                                    <Insets left="30.0" />
+                                 </VBox.margin>
+                              </Label>
+                           </children>
+                        </VBox>
+                        <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="4" GridPane.rowIndex="4">
+                           <children>
+                              <ImageView fx:id="image_App_29" fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" left="30.0" top="5.0" />
+                                 </VBox.margin>
+                              </ImageView>
+                              <Label fx:id="label_Alias_29">
+                                 <VBox.margin>
+                                    <Insets left="30.0" />
+                                 </VBox.margin>
+                              </Label>
+                              <Label fx:id="label_Status_29">
+                                 <VBox.margin>
+                                    <Insets left="30.0" />
+                                 </VBox.margin>
+                              </Label>
+                           </children>
+                        </VBox>
+                        <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="5" GridPane.rowIndex="4">
+                           <children>
+                              <ImageView fx:id="image_App_30" fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" left="30.0" top="5.0" />
+                                 </VBox.margin>
+                              </ImageView>
+                              <Label fx:id="label_Alias_30">
+                                 <VBox.margin>
+                                    <Insets left="30.0" />
+                                 </VBox.margin>
+                              </Label>
+                              <Label fx:id="label_Status_30">
+                                 <VBox.margin>
+                                    <Insets left="30.0" />
+                                 </VBox.margin>
+                              </Label>
+                           </children>
+                        </VBox>
+                     </children>
+                  </GridPane>
+               </content>
+            </ScrollPane>
+            <HBox prefHeight="60.0" prefWidth="969.0">
+               <children>
+                  <Button fx:id="button_AddAppliance" mnemonicParsing="false" onAction="#handelAddAppliance" prefHeight="26.0" prefWidth="120.0" text="Add Appliance">
+                     <HBox.margin>
+                        <Insets left="250.0" top="20.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button fx:id="button_RemoveAppliance" mnemonicParsing="false" onAction="#handelRemoveAppliance" prefWidth="120.0" text="Remove Appliance">
+                     <HBox.margin>
+                        <Insets left="250.0" top="20.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

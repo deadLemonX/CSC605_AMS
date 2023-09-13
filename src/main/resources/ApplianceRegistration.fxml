@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="527.0" prefWidth="351.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.ams.ApplianceRegistrationController">
+   <children>
+      <VBox layoutX="14.0" layoutY="14.0" prefHeight="509.0" prefWidth="323.0">
+         <children>
+            <Label text="Appliance Registration">
+               <font>
+                  <Font name="System Bold" size="30.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="25.0" left="20.0" top="10.0" />
+               </VBox.margin>
+            </Label>
+            <VBox prefHeight="60.0" prefWidth="100.0">
+               <children>
+                  <Label text="Appliance Type">
+                     <VBox.margin>
+                        <Insets left="40.0" />
+                     </VBox.margin>
+                  </Label>
+                  <ChoiceBox fx:id="choiceBox_ApplianceType" prefWidth="235.0">
+                     <VBox.margin>
+                        <Insets left="40.0" />
+                     </VBox.margin>
+                  </ChoiceBox>
+               </children>
+            </VBox>
+            <VBox prefHeight="60.0" prefWidth="100.0">
+               <children>
+                  <Label text="Brand">
+                     <VBox.margin>
+                        <Insets left="40.0" />
+                     </VBox.margin>
+                  </Label>
+                  <TextField fx:id="textFeild_Brand" maxWidth="235.0" prefWidth="235.0">
+                     <VBox.margin>
+                        <Insets left="40.0" />
+                     </VBox.margin>
+                  </TextField>
+               </children>
+            </VBox>
+            <VBox prefHeight="60.0" prefWidth="100.0">
+               <children>
+                  <Label text="Model">
+                     <VBox.margin>
+                        <Insets left="40.0" />
+                     </VBox.margin>
+                  </Label>
+                  <TextField fx:id="textFeild_Model" maxWidth="235.0" prefWidth="235.0">
+                     <VBox.margin>
+                        <Insets left="40.0" />
+                     </VBox.margin>
+                  </TextField>
+               </children>
+            </VBox>
+            <VBox prefHeight="60.0" prefWidth="100.0">
+               <children>
+                  <Label text="Appliance Location">
+                     <VBox.margin>
+                        <Insets left="40.0" />
+                     </VBox.margin>
+                  </Label>
+                  <TextField fx:id="textFeild_Location" maxWidth="235.0" prefWidth="235.0">
+                     <VBox.margin>
+                        <Insets left="40.0" />
+                     </VBox.margin>
+                  </TextField>
+               </children>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </VBox>
+            <VBox prefHeight="60.0" prefWidth="100.0">
+               <children>
+                  <Label text="Date Installed">
+                     <VBox.margin>
+                        <Insets left="40.0" />
+                     </VBox.margin>
+                  </Label>
+                  <HBox prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <Label text="MM">
+                           <HBox.margin>
+                              <Insets left="40.0" right="1.0" />
+                           </HBox.margin>
+                        </Label>
+                        <ChoiceBox fx:id="choiceBox_DateMM" prefHeight="26.0" prefWidth="40.0">
+                           <HBox.margin>
+                              <Insets right="10.0" />
+                           </HBox.margin>
+                        </ChoiceBox>
+                        <Label text="DD">
+                           <HBox.margin>
+                              <Insets right="1.0" />
+                           </HBox.margin>
+                        </Label>
+                        <ChoiceBox fx:id="choiceBox_DateDD" prefHeight="26.0" prefWidth="40.0">
+                           <HBox.margin>
+                              <Insets right="10.0" />
+                           </HBox.margin>
+                        </ChoiceBox>
+                        <Label text="YYYY">
+                           <HBox.margin>
+                              <Insets right="1.0" />
+                           </HBox.margin>
+                        </Label>
+                        <ChoiceBox fx:id="choiceBox_DateYYYY" prefHeight="26.0" prefWidth="60.0" />
+                     </children>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </HBox>
+               </children>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </VBox>
+            <VBox prefHeight="60.0" prefWidth="100.0">
+               <children>
+                  <Label text="Alias">
+                     <VBox.margin>
+                        <Insets left="40.0" />
+                     </VBox.margin>
+                  </Label>
+                  <TextField fx:id="textFeild_Alias" maxWidth="235.0" prefWidth="235.0">
+                     <VBox.margin>
+                        <Insets left="40.0" />
+                     </VBox.margin>
+                  </TextField>
+               </children>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </VBox>
+            <HBox prefHeight="75.0" prefWidth="323.0">
+               <children>
+                  <Button fx:id="button_CancelWindow" mnemonicParsing="false" onAction="#handelButtonCancel" prefWidth="80.0" text="Cancel">
+                     <HBox.margin>
+                        <Insets left="40.0" top="25.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button fx:id="button_Registration" mnemonicParsing="false" onAction="#handelButtonRegistration" prefHeight="26.0" prefWidth="79.0" text="Registrator">
+                     <HBox.margin>
+                        <Insets left="75.0" top="25.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

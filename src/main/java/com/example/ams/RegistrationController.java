@@ -32,7 +32,7 @@ public class RegistrationController {
         final String TABLE_NAME = "user_registration";
 
         // Call the addUser method from registrationDatabaseStuff with the required arguments
-        boolean registrationSuccess = registrationDatabaseStuff.addUser(DATABASE_URL, TABLE_NAME, username, password);
+        boolean registrationSuccess = UserData.addUser(DATABASE_URL, TABLE_NAME, username, password);
 
         if (registrationSuccess) {
             // Create and show a success alert

@@ -79,7 +79,7 @@ public class Login_Controller {
     public void onCreateAccountButtonClick(ActionEvent actionEvent) {
         try {
             // Load the RegistrationDialog.fxml file
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("RegistrationDialog.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/RegistrationDialog.fxml"));
             Parent root = loader.load();
             // Create a new stage for the registration dialog
             Stage stage = new Stage();

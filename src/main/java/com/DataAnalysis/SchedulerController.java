@@ -107,7 +107,7 @@ public class SchedulerController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         scheduler = new Scheduler();
-        final String DATABASE_URL = "jdbc:sqlite:/Users/matthewrivera/IdeaProjects/CSC605_AMS/Untitled";
+        final String DATABASE_URL = "jdbc:sqlite:/Users/matthewrivera/Projects/AMS/AMS_Database";
 
         final String SCHEDULE_TABLE_NAME = "ScheduleTable";
         final String MAINTENANCE_TABLE_NAME = "MaintenanceTable";
@@ -137,19 +137,6 @@ public class SchedulerController implements Initializable {
         }
         SelectApplianceComboBox.setItems(FXCollections.observableArrayList(lstServiceAppliance));
 
-        /*
-        List<String> lstApplianceID = databaseManager.getDataFromColumn(APPLIANCE_TABLE_NAME, APPLIANCE_KEY_COLUMN_NAME);
-        List<String> lstServiceAppliance = new ArrayList<String>();
-        for (int i = 0; i < lstApplianceID.size(); i++) {
-            String status = (String) databaseManager.getCellValue(APPLIANCE_KEY_COLUMN_NAME, "Status", lstApplianceID.get(i), APPLIANCE_TABLE_NAME);
-            if (status.equals("Needs Service")) {
-                String alias = (String) databaseManager.getCellValue(APPLIANCE_KEY_COLUMN_NAME, "Alias", lstApplianceID.get(i), APPLIANCE_TABLE_NAME);
-                lstServiceAppliance.add(alias);
-            }
-        }
-        SelectApplianceComboBox.setItems(FXCollections.observableArrayList(lstServiceAppliance));
-
-         */
     }
 
 }

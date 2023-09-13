@@ -95,7 +95,7 @@ public class ApplianceManager {
             Furnace
         */
         /*
-        String imageDataHomeDir ="/Users/matthewrivera/IdeaProjects/CSC605_AMS/src/main/resources/com/DataAnalysis/images/";
+        String imageDataHomeDir ="/Users/matthewrivera/Projects/AMS/src/main/resources/Images/";
         applianceManager.addApplianceTypeImageLink(DATABASE_URL, TABLE_NAME_IMAGE_DATA, "Refrigerator", imageDataHomeDir + "refrigerator.png");
         applianceManager.addApplianceTypeImageLink(DATABASE_URL, TABLE_NAME_IMAGE_DATA, "Dishwasher", imageDataHomeDir + "dishwasher.png");
         applianceManager.addApplianceTypeImageLink(DATABASE_URL, TABLE_NAME_IMAGE_DATA, "Washing Machine", imageDataHomeDir + "washing-machine.png");

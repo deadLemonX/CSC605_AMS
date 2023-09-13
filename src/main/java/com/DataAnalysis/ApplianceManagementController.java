@@ -195,7 +195,7 @@ public class ApplianceManagementController implements Initializable {
         } else {
             alias.setText("");
             status.setText("");
-            imageFilePath = "/Users/matthewrivera/Projects/AMS/src/main/resources/com/DataAnalysis/images/blankspace.png";
+            imageFilePath = "/Users/matthewrivera/Projects/AMS/src/main/resources/Images/blankspace.png";
         }
         InputStream stream = null;
         try {

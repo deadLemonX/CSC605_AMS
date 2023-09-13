@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="691.0" prefWidth="834.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.ams_scheduler.SchedulerController">
+   <children>
+      <DatePicker fx:id="MaintenanceDatePicker" layoutX="574.0" layoutY="160.0" />
+      <Label fx:id="CalendarLabel" layoutX="586.0" layoutY="119.0" prefHeight="17.0" prefWidth="149.0" text="Select Maintenance date" />
+      <Label fx:id="AlertLabel" layoutX="73.0" layoutY="110.0" prefHeight="17.0" prefWidth="184.0" text="Needs Maintenance Scheduling" />
+      <Button fx:id="ConfirmAppointmentButton" layoutX="286.0" layoutY="363.0" mnemonicParsing="false" onAction="#onConfirmAppointmentButtonClick" text="Confirm appointment" />
+      <Button fx:id="GetRepairButton" layoutX="294.0" layoutY="73.0" mnemonicParsing="false" onAction="#onGetRepairButtonClick" text="Get Appliances needing repair" />
+      <ComboBox fx:id="SelectApplianceComboBox" layoutX="80.0" layoutY="147.0" prefWidth="150.0" promptText="Select Appliance" />
+      <ComboBox fx:id="SelectTechnicianComboBox" layoutX="294.0" layoutY="147.0" prefWidth="150.0" promptText="Select Technician" />
+      <TextArea fx:id="AppointmentsTextArea" layoutX="112.0" layoutY="449.0" prefHeight="200.0" prefWidth="540.0" />
+      <Label layoutX="286.0" layoutY="420.0" prefHeight="17.0" prefWidth="149.0" text="Confirmed Appointments" />
+      <Label fx:id="AppointmentConfirmationLabel" layoutX="163.0" layoutY="395.0" prefHeight="17.0" prefWidth="455.0" />
+      <Label alignment="TOP_CENTER" layoutX="189.0" layoutY="22.0" prefHeight="42.0" prefWidth="431.0" text="Appliance Maintenance Scheduler">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+   </children>
+</Pane>

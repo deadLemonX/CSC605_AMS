@@ -126,6 +126,7 @@ public class SchedulerController implements Initializable {
         List<String> lstTechs = databaseManager.getDataFromColumn(MAINTENANCE_TABLE_NAME, "WorkerName");
         SelectTechnicianComboBox.setItems(FXCollections.observableArrayList(lstTechs));
 
+        /*
         int applainceCount = databaseManager.getRowCount(APPLIANCE_TABLE_NAME);
         List<String> lstServiceAppliance = new ArrayList<String>();
         List<String> lstApplianceID = databaseManager.getDataFromColumn(APPLIANCE_TABLE_NAME, APPLIANCE_KEY_COLUMN_NAME);
@@ -136,7 +137,16 @@ public class SchedulerController implements Initializable {
             lstServiceAppliance.add(dataLine);
         }
         SelectApplianceComboBox.setItems(FXCollections.observableArrayList(lstServiceAppliance));
-
+        */
+        List<String> lstApplianceID = databaseManager.getDataFromColumn(APPLIANCE_TABLE_NAME, APPLIANCE_KEY_COLUMN_NAME);
+        List<String> lstServiceAppliance = new ArrayList<String>();
+        for (int i = 0; i < lstApplianceID.size(); i++) {
+            String status = (String) databaseManager.getCellValue(APPLIANCE_KEY_COLUMN_NAME, "Status", lstApplianceID.get(i), APPLIANCE_TABLE_NAME);
+            if (status.equals("Needs Service")) {
+                lstServiceAppliance.add(lstApplianceID.get(i));
+            }
+        }
+        SelectApplianceComboBox.setItems(FXCollections.observableArrayList(lstServiceAppliance));
     }
 
 }
